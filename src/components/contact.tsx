@@ -22,18 +22,24 @@ export function Contact() {
           </form>
         </div>
         <div className="mt-12 flex justify-center space-x-6">
-          <Button variant="ghost" size="icon" className="text-blue-400 hover:text-blue-300 hover:bg-gray-700">
-            <Github className="h-6 w-6" />
-          </Button>
-          <Button variant="ghost" size="icon" className="text-blue-400 hover:text-blue-300 hover:bg-gray-700">
-            <Linkedin className="h-6 w-6" />
-          </Button>
-          <Button variant="ghost" size="icon" className="text-blue-400 hover:text-blue-300 hover:bg-gray-700">
-            <Mail className="h-6 w-6" />
-          </Button>
+          {/* External links with anchor tags */}
+          <a href="https://github.com/deepak748030" target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="icon" className="text-blue-400 hover:text-blue-300 hover:bg-gray-700">
+              <Github className="h-6 w-6" />
+            </Button>
+          </a>
+          <a href="https://www.linkedin.com/in/deepak-kushwah-43b23a259/" target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="icon" className="text-blue-400 hover:text-blue-300 hover:bg-gray-700">
+              <Linkedin className="h-6 w-6" />
+            </Button>
+          </a>
+          <a href="mailto:deepakkushwah748930@gmail.com">
+            <Button variant="ghost" size="icon" className="text-blue-400 hover:text-blue-300 hover:bg-gray-700">
+              <Mail className="h-6 w-6" />
+            </Button>
+          </a>
         </div>
       </div>
     </section>
   )
 }
-
