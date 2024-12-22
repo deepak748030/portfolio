@@ -77,7 +77,16 @@ export function Header() {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 z-40 bg-gray-900 bg-opacity-95 md:hidden"
           >
-            <div className="flex flex-col items-center justify-center h-full">
+            <div className="flex flex-col items-center justify-center h-full mt-32 pt-16 px-6">
+              <Button
+                variant="ghost"
+                className="absolute top-4 right-4 text-gray-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </Button>
               {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
                 <Button
                   key={item}
@@ -95,4 +104,3 @@ export function Header() {
     </header>
   )
 }
-
