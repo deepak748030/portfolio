@@ -47,7 +47,6 @@ export function Skills() {
                 { name: 'Time Management', level: 90 },
                 { name: 'Team Collaboration', level: 85 },
                 { name: 'Adaptability', level: 88 },
-                { name: 'Communication', level: 85 },
                 { name: 'Leadership', level: 80 },
               ].map((skill) => (
                 <Card key={skill.name} className="bg-gray-700">
