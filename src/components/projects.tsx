@@ -1,17 +1,51 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ExternalLink } from 'lucide-react'
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from 'lucide-react';
 
 export function Projects() {
   const projects = [
-    { title: 'SportMate', desc: 'A platform for sports enthusiasts to connect and manage events', tags: ['JavaScript'] },
-    { title: 'BattleChamp', desc: 'An online game platform where users can compete in various challenges', tags: ['JavaScript'] },
-    { title: 'Full-Stack E-Commerce', desc: 'A complete e-commerce platform with payment integration and user management', tags: ['JavaScript'] },
-    { title: 'Silkvory Marketing Agency Landing Page', desc: 'Landing page for a marketing agency with a modern design', tags: ['HTML'] },
-    { title: 'MovieSite', desc: 'A site to browse and search for movies with a user-friendly interface', tags: ['HTML'] },
-    { title: 'MX Dashboard', desc: 'A dashboard for monitoring metrics with real-time data visualization', tags: ['JavaScript'] }
-  ]
+    {
+      title: 'SportMate',
+      desc: 'A platform for sports enthusiasts to connect and manage events',
+      tags: ['NodeJs', 'Express', 'React', 'MongoDB'],
+      link: 'https://github.com/deepak748030/SportMate.git'
+    },
+    {
+      title: 'BattleChamp',
+      desc: 'An online game platform where users can compete in various challenges',
+      tags: ['NodeJs', 'Express', 'Axios', 'MongoDB', 'Cors', 'Multer'],
+      link: 'https://github.com/deepak748030/BattleChamp.git'
+    },
+    {
+      title: 'Full-Stack E-Commerce',
+      desc: 'A complete e-commerce platform with payment integration and user management',
+      tags: ['NodeJs', 'Express', 'React', 'MongoDB'],
+      link: 'https://github.com/deepak748030/full-stack-e-commerce.git'
+    },
+    {
+      title: 'Silkvory Marketing Agency Landing Page',
+      desc: 'Landing page for a marketing agency with a modern design',
+      tags: ['HTML', 'Bootstrap'],
+      link: 'https://github.com/deepak748030/silkvory-marketing-agency-landing-page.git'
+    },
+    {
+      title: 'TelegramFileStoreBot',
+      desc: 'A Telegram bot for file storage and management',
+      tags: ['NodeJs', 'Express', 'MongoDB', 'Telegraf'],
+      link: 'https://github.com/deepak748030/telegramFileStoreBot.git'
+    },
+    {
+      title: 'MX Dashboard',
+      desc: 'A dashboard for monitoring metrics with real-time data visualization',
+      tags: ['React', 'JavaScript', 'lucide-react', 'react-toastify'],
+      link: 'https://github.com/deepak748030/mx-admin-dahsboard.git'
+    }
+  ];
+
+  const handleProjectClick = (link: string) => {
+    window.open(link, '_blank', 'noopener noreferrer');
+  };
 
   return (
     <section id="projects" className="py-20">
@@ -28,7 +62,11 @@ export function Projects() {
                     <Badge key={tag} variant="secondary" className="text-xs bg-gray-600 text-blue-300">{tag}</Badge>
                   ))}
                 </div>
-                <Button variant="outline" className="text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-gray-900">
+                <Button
+                  variant="outline"
+                  className="text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-gray-900"
+                  onClick={() => handleProjectClick(project.link)}
+                >
                   View Project <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
@@ -37,5 +75,5 @@ export function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
