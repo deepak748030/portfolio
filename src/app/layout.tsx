@@ -1,22 +1,18 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+// src/app/layout.tsx
+import React from 'react';
 
-const inter = Inter({ subsets: ['latin'] })
+// No need for next/font/google anymore
+const inter = "Inter, sans-serif";
 
-export const metadata: Metadata = {
-  title: 'Deepak Kushwah Portfolio',
-  description: 'Full Stack Developer specializing in MERN Stack | React, Node.js, MongoDB, Express | Problem Solver & Tech Enthusiast',
-}
+export const metadata = {
+  title: "Your Portfolio",
+  description: "A description of your portfolio"
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
+    <div style={{ fontFamily: inter }}>
+      {children}
+    </div>
+  );
 }
