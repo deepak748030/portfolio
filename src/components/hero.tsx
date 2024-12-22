@@ -52,8 +52,8 @@ export function Hero() {
             transition={{ duration: 0.5 }}
           >
             <Avatar className="w-64 h-64 border-4 border-blue-400 shadow-lg shadow-blue-500/50">
-              <AvatarImage src="/placeholder.svg?height=256&width=256" alt="Deepak Kushwah" />
-              <AvatarFallback>DK</AvatarFallback>
+              <AvatarImage src="./profile-pic.png?height=256&width=256" alt="Deepak Kushwah" />
+              <AvatarFallback></AvatarFallback>
             </Avatar>
           </motion.div>
         </div>
